@@ -1,0 +1,99 @@
+.ggboys{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ggg{
+    backdrop-filter: blur(50px);
+}
+
+
+.big-circle{
+    box-shadow: 10px 10px 100px 10px rgb(70, 83, 221)  ;
+     animation-name: bigcircle;
+     animation-duration: 16s;
+     animation-iteration-count: infinite;
+     /* position: fixed; */
+
+}
+.small-circle{
+    box-shadow: 10px 10px 100px 10px rgb(226, 94, 116) ;
+   animation-name: smallcircle;
+   animation-duration: 16s;
+   animation-iteration-count: infinite;
+   
+}
+
+
+.gg:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.3s;
+
+    /* transition-timing-function: ease-in; */
+}
+
+@keyframes bigcircle {
+    0%{
+        transform: translate(50px);
+       
+    }
+    50%{
+        transform: translateY(-100px)
+    }
+    100%{
+        transform: translate(50px);
+    }
+}
+
+
+@keyframes smallcircle{
+    0%{
+        transform: translate(50px);
+       
+    }
+    50%{
+        transform: translatey(150px)
+    }
+    100%{
+        transform: translate(50px);
+    }
+}
+
+.bgrang{
+    background-color: rgba(255, 250, 250, 0.186);
+}
+
+.linkColor{
+    z-index: 100;
+    scale: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.364);
+    transition: 0.5s ease-in-out;
+}
+
+.active{
+    scale: 1;
+}
+
+.overlay {
+    position: fixed;
+    background-color: #5f5f5f83;
+    position: absolute;
+    z-index: 10;
+    /* background-color: white; */
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+    /* z-index: 50; */
+  }
+
+  .overlayactive {
+    opacity: 1;
+    pointer-events: initial;
+  }
